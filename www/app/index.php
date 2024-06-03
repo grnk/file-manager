@@ -20,6 +20,9 @@ spl_autoload_register(
     )
 );
 
+if (isset($_GET['path']) && !str_starts_with($_GET['path'], ROOT_FOLDER)) {
+    unset($_GET['path']);
+}
 $iterator = new FolderIterator(
     isset($_GET['path']) ? $_GET['path'] : ROOT_FOLDER,
     !isset($_GET['path'])
