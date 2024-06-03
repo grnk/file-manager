@@ -1,0 +1,5 @@
+*.bash_history
+/www/.composer
+
+# phpstorm project files
+.idea
